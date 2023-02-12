@@ -125,7 +125,7 @@ compatibility() {
 print "Checking if the addon is compatible with your panel..."
 
 sleep 2
-if [ "$PANEL_VERSION" == "1.7.0" ] || [ "$PANEL_VERSION" == "1.8.1" ]; then
+if [ "$PANEL_VERSION" == "1.7.0" ] || [ "$PANEL_VERSION" == "1.11.3" ]; then
     print "Compatible Version!"
   else
     print_error "Incompatible Version!"
@@ -192,7 +192,7 @@ sed -i "32a\{!! Theme::css('css/admin.css?t={cache-version}') !!}" "$PTERO/resou
 # Panel Production #
 production() {
 print "Producing panel..."
-print_warning "This process takes a few minutes, please do not cancel it."
+print_warning "This process takes a few minutes, ok mau selesai."
 
 if [ -d "$PTERO/node_modules" ]; then
     yarn --cwd $PTERO add @emotion/react
